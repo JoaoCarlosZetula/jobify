@@ -117,12 +117,6 @@ const init = async() => {
     const db = await dbConnection
     await db.run('create table if not exists categorias (id INTEGER PRIMARY KEY, categoria TEXT);')
     await db.run('create table if not exists vagas (id INTEGER PRIMARY KEY, categoria INTEGER, titulo TEXT, descricao TEXT);')
-    //const categoria = 'Marketing team'
-    //await db.run(`insert into categorias(categoria) values('${categoria}')`)
-    //const vaga = 'Marketing digital (San Francisco)'
-    //const descricao = 'Vaga para Fullstack developer que fez o Fullstack Lab'
-    //await db.run(`insert into vagas(categoria, titulo, descricao) values(2, '${vaga}', '${descricao}')`)
-
 }
 init();
 
